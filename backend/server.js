@@ -17,12 +17,8 @@ connectDB()
 connectCloudinary()
 
 app.use(express.json())
-// app.use(cors())
+app.use(cors())
 
-app.use(cors({
-  origin: "https://e-commerce-frontend-liart-eta.vercel.app",
-  credentials: true
-}))
 // Api endpoints
 app.use('/api/user',userRouter);
 app.use('/api/product',ProductRouter);
